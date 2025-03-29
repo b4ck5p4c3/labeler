@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import usb.core
 import usb.util
+import sys
 
 PORT = 80
 VID = 0x1fc9
@@ -23,10 +24,13 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         try:
             content_length = int(self.headers.get("content-length", 0))
             post_body = self.rfile.read(content_length)
-            
+
             usb_device = usb.core.find(idVendor=VID, idProduct=PID)
             if usb_device is None:
                 raise ValueError("usb device not found")
+
+            if usb_device.is_kernel_driver_active(0):
+                usb_device.detach_kernel_driver(0)
 
             usb_device.set_configuration()
             usb.util.claim_interface(usb_device, 0)
@@ -37,6 +41,7 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
             send_code(self, 200, b"")
         except Exception as e:
+            print(e, file=sys.stderr)
             send_code(self, 500, str(e).encode("utf-8"))
 
 httpd = HTTPServer(('', PORT), HTTPRequestHandler)
