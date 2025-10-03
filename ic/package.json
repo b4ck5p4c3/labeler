@@ -4,12 +4,20 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^24.6.2",
+    "tsx": "^4.20.6"
+  },
+  "scripts": {
+    "main": "tsx index.ts"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "ky": "^1.8.1"
+    "@types/prompt-sync": "^4.2.3",
+    "dotenv": "^17.2.3",
+    "ky": "^1.8.1",
+    "prompt-sync": "^4.2.0"
   }
 }
