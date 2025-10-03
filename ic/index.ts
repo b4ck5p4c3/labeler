@@ -150,14 +150,6 @@ function render(params: TemplateParams): string {
     }
 
     /* Footer */
-    // const maxY = 120 * 8;
-
-    program.push(`QRCODE 440,780,H,5,A,0,"https://i.bksp.in/${params.inventoryNumber}"`);
-
-    /* Footer */
-    const maxY = 120 * 8;
-    program.push(`TEXT 16,${maxY - 100},"3",0,3,3,"${splitInChunks(params.inventoryNumber, 3, ' ')}"`);
-    program.push(`REVERSE 0,${maxY - 120},360,160`);
     program.push(`QRCODE 440,780,H,5,A,0,"https://i.bksp.in/${params.inventoryNumber}"`);
 
     program.push(`PRINT 1`);
