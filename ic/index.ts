@@ -1,10 +1,10 @@
 import ky from "ky";
 import path from 'path';
-import type {DigikeySearchResponse} from "./digikey-types";
+import type { DigikeySearchResponse } from "./digikey-types";
 import fs from "fs";
-import type {LCSCSearchResponse} from "./lcsc-types.ts";
-import {fileURLToPath} from 'url';
-import {dirname} from 'path';
+import type { LCSCSearchResponse } from "./lcsc-types.ts";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import dotenv from 'dotenv';
 import promptSync from 'prompt-sync';
 
@@ -120,6 +120,10 @@ function render(params: TemplateParams): string {
         'CLS',
     ];
 
+    program.push(`TEXT 20,14,"3",0,3,3,"${splitInChunks(params.inventoryNumber, 3, ' ')}"`);
+    program.push(`REVERSE 0,0,364,80`);
+    currentY += 100;
+
     /* Header */
     program.push(`TEXT 16,${currentY},"5",0,1,1,"${params.model}"`);
     currentY += 64;
@@ -143,7 +147,10 @@ function render(params: TemplateParams): string {
         }
     }
 
-    /* Codes */
+    /* Footer */
+    // const maxY = 120 * 8;
+
+    program.push(`QRCODE 440,780,H,5,A,0,"https://i.bksp.in/${params.inventoryNumber}"`);
 
     /* Footer */
     const maxY = 120 * 8;
