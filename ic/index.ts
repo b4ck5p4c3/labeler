@@ -8,7 +8,9 @@ import { dirname } from 'path';
 import dotenv from 'dotenv';
 import promptSync from 'prompt-sync';
 
-dotenv.config();
+dotenv.config({
+    quiet: true,
+});
 
 const prompt = promptSync();
 
@@ -281,7 +283,9 @@ async function getLCSCProductVariants(search: string): Promise<AbstractProductIn
         model: product.productModel,
         datasheet: product.pdfUrl ?? null,
         description: product.catalogName + " - " + product.productIntroEn,
-        properties: Object.fromEntries(product.paramVOList.map(parameter => [parameter.paramNameEn, parameter.paramValueEn])),
+        properties: product.paramVOList
+            ? Object.fromEntries(product.paramVOList.map(parameter => [parameter.paramNameEn, parameter.paramValueEn]))
+            : {},
         provider: ProductInfoProvider.LCSC
     }));
 }
