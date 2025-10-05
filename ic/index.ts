@@ -162,6 +162,7 @@ async function print(params: TemplateParams) {
         .replaceAll('µ', 'u')
         .replaceAll('°', "'")
         .replaceAll('±', '+-')
+        .replaceAll('℃', '\'C')
 
 
     const response = await fetch("http://labeler.int.bksp.in/tspl", {
@@ -271,7 +272,7 @@ async function getLCSCProductVariants(search: string): Promise<AbstractProductIn
 
     const response = await request.json() as LCSCSearchResponse;
 
-    return response.result.productSearchResultVO.productList.map(product => ({
+    return response.result.productSearchResultVO?.productList?.map(product => ({
         model: product.productModel,
         datasheet: product.pdfUrl ?? null,
         description: product.catalogName + " - " + product.productIntroEn,
@@ -279,7 +280,7 @@ async function getLCSCProductVariants(search: string): Promise<AbstractProductIn
             ? Object.fromEntries(product.paramVOList.map(parameter => [parameter.paramNameEn, parameter.paramValueEn]))
             : {},
         provider: ProductInfoProvider.LCSC
-    }));
+    })) ?? [];
 }
 
 async function getProductInformation(search: string): Promise<TemplateParams | null> {
