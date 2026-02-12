@@ -7,6 +7,7 @@ import promptSync from 'prompt-sync'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import { Lock } from 'semaphore-async-await'
+import { transliter } from 'transliter'
 
 import type { DigikeySearchResponse } from './digikey-types'
 import type { LCSCSearchResponse } from './lcsc-types'
@@ -167,9 +168,10 @@ async function print (parameters: TemplateParameters) {
     .replaceAll('°', "'")
     .replaceAll('±', '+-')
     .replaceAll('℃', '\'C')
+    .replaceAll('…', '...')
 
   const response = await fetch('http://labeler.int.bksp.in/tspl', {
-    body: template,
+    body: transliter(template, 'iso9'),
     headers: {
       'Content-Type': 'application/tspl',
     },
@@ -342,17 +344,34 @@ async function fetchFromPuppeteer (url: string): Promise<string> {
   }
 }
 
-async function getChipdipProductVariants (search: string): Promise<AbstractProductInfo[]> {
+async function findChipdipGroupVariants (search: string): Promise<ChipDipGroupVariant[]> {
   const url = `https://www.chipdip.ru/search?searchtext=${encodeURIComponent(search)}`
   const searchResponseText = await fetchFromPuppeteer(url)
   const searchResponseHtml = new JSDOM(searchResponseText)
 
   const groupNodes = [...searchResponseHtml.window.document.querySelectorAll('li:has(.serp__group-col-item)')]
   if (groupNodes.length === 0) {
-    return []
+    const otherGroupNodes = [...searchResponseHtml.window.document.querySelectorAll('td.group-header-wrap')]
+    return otherGroupNodes.map(node => {
+      const count = node.querySelector('sub')?.textContent ?? 'N/A'
+      const linkNode = node.querySelector('a')
+      if (!linkNode) {
+        return null
+      }
+
+      const name = linkNode.textContent
+      const groupName = (name.match(/«(.*?)»/ig) ?? [])[1] ?? name
+      const url = linkNode.href
+
+      return {
+        count,
+        name: groupName,
+        url
+      }
+    }).filter(Boolean) as ChipDipGroupVariant[]
   }
 
-  const groupVariants: ChipDipGroupVariant[] = groupNodes.map(node => {
+  return groupNodes.map(node => {
     const count = node.querySelector('sub')?.textContent ?? 'N/A'
     const nameNode = node.querySelector('a')
     if (!nameNode) {
@@ -368,6 +387,10 @@ async function getChipdipProductVariants (search: string): Promise<AbstractProdu
       url
     }
   }).filter(Boolean) as ChipDipGroupVariant[]
+}
+
+async function getChipdipProductVariants (search: string): Promise<AbstractProductInfo[]> {
+  const groupVariants = await findChipdipGroupVariants(search)
 
   if (groupVariants.length === 0) {
     return []
@@ -418,8 +441,6 @@ async function getChipdipProductVariants (search: string): Promise<AbstractProdu
       const value = propertyNode.lastChild?.textContent?.replace(/^(\s*):(\s*)/, '') ?? 'N/A'
       properties[key] = value
     }
-
-    console.info(properties)
 
     result.push({
       datasheet: () => getChipdipDatasheets(url),

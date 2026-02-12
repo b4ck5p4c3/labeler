@@ -11,6 +11,9 @@ importers:
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
+      iconv:
+        specifier: ^3.0.1
+        version: 3.0.1
       jsdom:
         specifier: ^28.0.0
         version: 28.0.0
@@ -32,6 +35,9 @@ importers:
       semaphore-async-await:
         specifier: ^1.5.1
         version: 1.5.1
+      transliter:
+        specifier: ^3.0.0
+        version: 3.0.0
       typescript:
         specifier: ^5
         version: 5.9.3
@@ -45,6 +51,9 @@ importers:
       '@types/bun':
         specifier: latest
         version: 1.2.23(@types/react@19.2.0)
+      '@types/iconv':
+        specifier: ^3.0.4
+        version: 3.0.4
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -389,6 +398,9 @@ packages:
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
+
+  '@types/iconv@3.0.4':
+    resolution: {integrity: sha512-bk+twLWL20lSbLw65vMUK1oy9dVEDMytQczaxqQs6p1MjY0ogiOidSLPsbfyQ04HxN9spZ9FPYkXZuCyw5C7Nw==}
 
   '@types/jsdom@27.0.0':
     resolution: {integrity: sha512-NZyFl/PViwKzdEkQg96gtnB8wm+1ljhdDay9ahn4hgb+SfVtPCbm3TlmDUFXTA+MGN3CijicnMhG18SI5H3rFw==}
@@ -1178,6 +1190,10 @@ packages:
   https-proxy-agent@7.0.6:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
+
+  iconv@3.0.1:
+    resolution: {integrity: sha512-lJnFLxVc0d82R7GfU7a9RujKVUQ3Eee19tPKWZWBJtAEGRHVEyFzCtbNl3GPKuDnHBBRT4/nDS4Ru9AIDT72qA==}
+    engines: {node: '>=10.0.0'}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -1996,6 +2012,10 @@ packages:
     resolution: {integrity: sha512-bLVMLPtstlZ4iMQHpFHTR7GAGj2jxi8Dg0s2h2MafAE4uSWF98FC/3MomU51iQAMf8/qDUbKWf5GxuvvVcXEhw==}
     engines: {node: '>=20'}
 
+  transliter@3.0.0:
+    resolution: {integrity: sha512-CabV8mfF0ArDrtJss2go8S0HDjH6BxIuoQetHIgkqAu3Zbj6vpni0698KZfgCBxwL+Jur74nEmZEFz1GTnzSSg==}
+    engines: {node: '>=14.0.0'}
+
   ts-api-utils@2.4.0:
     resolution: {integrity: sha512-3TaVTaAv2gTiMB35i3FiGJaRfwb3Pyn/j3m/bfAvGe8FB7CF6u+LMYqYlDh7reQf7UNvoTvdfAqHGmPGOSsPmA==}
     engines: {node: '>=18.12'}
@@ -2453,6 +2473,10 @@ snapshots:
   '@types/esrecurse@4.3.1': {}
 
   '@types/estree@1.0.8': {}
+
+  '@types/iconv@3.0.4':
+    dependencies:
+      '@types/node': 24.6.2
 
   '@types/jsdom@27.0.0':
     dependencies:
@@ -3455,6 +3479,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  iconv@3.0.1: {}
+
   ignore@5.3.2: {}
 
   ignore@7.0.5: {}
@@ -4382,6 +4408,8 @@ snapshots:
   tr46@6.0.0:
     dependencies:
       punycode: 2.3.1
+
+  transliter@3.0.0: {}
 
   ts-api-utils@2.4.0(typescript@5.9.3):
     dependencies:
