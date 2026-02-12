@@ -1,5 +1,3 @@
-import { bypass } from '@cantfindkernel/ddos-guard-bypass'
-import axios from 'axios'
 import { JSDOM } from 'jsdom'
 import ky from 'ky'
 import fs from 'node:fs'
@@ -9,7 +7,6 @@ import promptSync from 'prompt-sync'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import { Lock } from 'semaphore-async-await'
-import { CookieJar } from 'tough-cookie'
 
 import type { DigikeySearchResponse } from './digikey-types'
 import type { LCSCSearchResponse } from './lcsc-types'
