@@ -1,5 +1,5 @@
 {
-  "latestInventoryNumber": 477,
+  "latestInventoryNumber": 480,
   "items": {
     "000020": {
       "model": "OPA360AIDCKRG4",
@@ -8997,7 +8997,7 @@
     },
     "000478": {
       "datasheet": null,
-      "description": "ОС1644, Диод, Опытный",
+      "description": "ОС1644, Диод, ХЗ",
       "model": "ОС1644",
       "properties": {},
       "provider": "human",
@@ -9012,6 +9012,20 @@
       "provider": "human",
       "url": null,
       "inventoryNumber": "000479"
+    },
+    "000480": {
+      "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/ATECC608A-CryptoAuthentication-Device-Summary-Data-Sheet-DS40001977B.pdf",
+      "description": "Authentication Chip 8-SOIC",
+      "model": "ATECC608A-SSHDA-T",
+      "properties": {
+        "Type": "Authentication Chip",
+        "Applications": "Networking and Communications",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "8-SOIC (0.154\", 3.90mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/ATECC608A-SSHDA-T/7928116",
+      "inventoryNumber": "000480"
     }
   },
   "digikey": {
