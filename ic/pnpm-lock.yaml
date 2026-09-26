@@ -20,6 +20,9 @@ importers:
       ky:
         specifier: ^1.8.1
         version: 1.11.0
+      ky-cookies:
+        specifier: ^1.0.0
+        version: 1.0.0(@types/tough-cookie@4.0.5)(ky@1.11.0)(tough-cookie@6.0.2)
       prompt-sync:
         specifier: ^4.2.0
         version: 4.2.0
@@ -35,6 +38,9 @@ importers:
       semaphore-async-await:
         specifier: ^1.5.1
         version: 1.5.1
+      tough-cookie:
+        specifier: ^6.0.2
+        version: 6.0.2
       transliter:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1424,6 +1430,14 @@ packages:
     resolution: {integrity: sha512-NOW9QQXMoZGg/oqnVNoNTTIFEIid1627WCffUBJEdMxYApq7mNE7CpzucIPc+ZQg25Phej7IJSmX3hO+oblOtQ==}
     engines: {node: '>=0.10.0'}
 
+  ky-cookies@1.0.0:
+    resolution: {integrity: sha512-j0FMtoPvEE18eiyLSJFiNLwaK0Ij+G7a9Ohc25boEZjEDFHYBRL1dUheGtUX8cUlbbLt18TG8tz8t4FZjZYH9w==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@types/tough-cookie': '>=4'
+      ky: '>=1'
+      tough-cookie: '>=6'
+
   ky@1.11.0:
     resolution: {integrity: sha512-NEyo0ICpS0cqSuyoJFMCnHOZJILqXsKhIZlHJGDYaH8OB5IFrGzuBpEwyoMZG6gUKMPrazH30Ax5XKaujvD8ag==}
     engines: {node: '>=18'}
@@ -2004,8 +2018,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tough-cookie@6.0.0:
-    resolution: {integrity: sha512-kXuRi1mtaKMrsLUxz3sQYvVl37B0Ns6MzfrtV5DvJceE9bPyspOqk9xxv7XbZWcfLWbFmm997vl83qUWVJA64w==}
+  tough-cookie@6.0.2:
+    resolution: {integrity: sha512-exgYmnmL/sJpR3upZfXG5PoatXQii55xAiXGXzY+sROLZ/Y+SLcp9PgJNI9Vz37HpQ74WvDcLT8eqm+kV3FzrA==}
     engines: {node: '>=16'}
 
   tr46@6.0.0:
@@ -3671,7 +3685,7 @@ snapshots:
       parse5: 8.0.0
       saxes: 6.0.0
       symbol-tree: 3.2.4
-      tough-cookie: 6.0.0
+      tough-cookie: 6.0.2
       undici: 7.21.0
       w3c-xmlserializer: 5.0.0
       webidl-conversions: 8.0.1
@@ -3718,6 +3732,12 @@ snapshots:
   kind-of@3.2.2:
     dependencies:
       is-buffer: 1.1.6
+
+  ky-cookies@1.0.0(@types/tough-cookie@4.0.5)(ky@1.11.0)(tough-cookie@6.0.2):
+    dependencies:
+      '@types/tough-cookie': 4.0.5
+      ky: 1.11.0
+      tough-cookie: 6.0.2
 
   ky@1.11.0: {}
 
@@ -4401,7 +4421,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tough-cookie@6.0.0:
+  tough-cookie@6.0.2:
     dependencies:
       tldts: 7.0.23
 

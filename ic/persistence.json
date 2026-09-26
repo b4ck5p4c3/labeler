@@ -1,5 +1,5 @@
 {
-  "latestInventoryNumber": 571,
+  "latestInventoryNumber": 611,
   "items": {
     "000020": {
       "model": "OPA360AIDCKRG4",
@@ -10975,10 +10975,826 @@
       "provider": "digikey",
       "url": "https://www.digikey.com/en/products/detail/olimex-ltd/SMD-IC-CH32V003J4M6/26717013",
       "inventoryNumber": "000571"
+    },
+    "000572": {
+      "datasheet": "https://www.bourns.com/docs/product-datasheets/mf-r.pdf",
+      "description": "Polymeric PTC Resettable Fuse 60V 500 mA Ih Through Hole Radial, Disc",
+      "model": "MF-R050",
+      "properties": {
+        "Type": "Polymeric",
+        "Voltage - Max": "60V",
+        "Current - Hold (Ih) (Max)": "500 mA",
+        "Current - Trip (It)": "1 A",
+        "Current - Max": "40 A",
+        "Time to Trip": "4 s",
+        "Resistance - Initial (Ri) (Min)": "410 mOhms",
+        "Resistance - Post Trip (R1) (Max)": "1.17 Ohms",
+        "Operating Temperature": "-40°C ~ 85°C",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "Radial, Disc",
+        "Size / Dimension": "0.311\" Dia x 0.122\" T (7.90mm x 3.10mm)",
+        "Height - Seated (Max)": "0.539\" (13.70mm)",
+        "Lead Spacing": "0.201\" (5.10mm)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/MF-R050/259965",
+      "inventoryNumber": "000572"
+    },
+    "000573": {
+      "datasheet": "",
+      "description": "RF Transceiver ICs - MSOP-10 RF Transceiver ICs ",
+      "model": "QN8027-SANC",
+      "properties": {
+        "Brand": "QUINTIC",
+        "Catalog": "RF Transceiver ICs",
+        "Encap": "MSOP-10",
+        "ParentCatalog": "RF and Wireless"
+      },
+      "provider": "lcsc",
+      "url": "https://www.lcsc.com/product-detail/C7422502.html",
+      "inventoryNumber": "000573"
+    },
+    "000574": {
+      "datasheet": "https://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf",
+      "description": "Linear Voltage Regulator IC Positive Fixed 1 Output 800mA TO-220",
+      "model": "LD1117V33",
+      "properties": {
+        "Output Configuration": "Positive",
+        "Output Type": "Fixed",
+        "Number of Regulators": "1",
+        "Voltage - Input (Max)": "15V",
+        "Voltage - Output (Min/Fixed)": "3.3V",
+        "Voltage Dropout (Max)": "1.2V @ 800mA",
+        "Current - Output": "800mA",
+        "Current - Quiescent (Iq)": "10 mA",
+        "PSRR": "75dB (120Hz)",
+        "Protection Features": "Over Current, Over Temperature",
+        "Operating Temperature": "0°C ~ 125°C",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "TO-220-3"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/LD1117V33/586012",
+      "inventoryNumber": "000574"
+    },
+    "000575": {
+      "datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g04.pdf?ts=1753305682684&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FSN74LVC1G04",
+      "description": "Inverter IC 1 Channel SOT-23-5",
+      "model": "SN74LVC1G04DBVR",
+      "properties": {
+        "Logic Type": "Inverter",
+        "Number of Circuits": "1",
+        "Number of Inputs": "1",
+        "Voltage - Supply": "1.65V ~ 5.5V",
+        "Current - Quiescent (Max)": "10 µA",
+        "Current - Output High, Low": "32mA, 32mA",
+        "Input Logic Level - Low": "0.58V ~ 1.65V",
+        "Input Logic Level - High": "1.07V ~ 3.85V",
+        "Max Propagation Delay @ V, Max CL": "3.7ns @ 5V, 50pF",
+        "Operating Temperature": "-40°C ~ 125°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "SC-74A, SOT-753"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN74LVC1G04DBVR/385716",
+      "inventoryNumber": "000575"
+    },
+    "000576": {
+      "datasheet": "https://www.gk-goodwork.com/static/upload/file/20260602/1780379805943537.pdf",
+      "description": "Bipolar (BJT) Transistor NPN 15 V 0.05 A 800MHz 200 mW Surface Mount SOT-23",
+      "model": "S9018",
+      "properties": {
+        "Transistor Type": "NPN",
+        "Current - Collector (Ic) (Max)": "0.05 A",
+        "Voltage - Collector Emitter Breakdown (Max)": "15 V",
+        "Vce Saturation (Max) @ Ib, Ic": "500mV @ 1mA, 10mA",
+        "Current - Collector Cutoff (Max)": "0.05µA (ICBO)",
+        "DC Current Gain (hFE) (Min) @ Ic, Vce": "70 @ 1mA, 5V",
+        "Power - Max": "200 mW",
+        "Frequency - Transition": "800MHz",
+        "Operating Temperature": "-55°C ~ 150°C (TJ)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "TO-236-3, SC-59, SOT-23-3"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/goodwork/S9018/29516844",
+      "inventoryNumber": "000576"
+    },
+    "000577": {
+      "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/22008E.pdf",
+      "description": "Linear Voltage Regulator IC Positive Fixed 1 Output 250mA SOT-23A-3",
+      "model": "MCP1702T-5002E/CB",
+      "properties": {
+        "Output Configuration": "Positive",
+        "Output Type": "Fixed",
+        "Number of Regulators": "1",
+        "Voltage - Input (Max)": "13.2V",
+        "Voltage - Output (Min/Fixed)": "5V",
+        "Voltage Dropout (Max)": "0.65V @ 250mA",
+        "Current - Output": "250mA",
+        "Current - Quiescent (Iq)": "5 µA",
+        "PSRR": "44dB (100Hz)",
+        "Protection Features": "Over Current, Over Temperature, Short Circuit",
+        "Operating Temperature": "-40°C ~ 125°C",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "TO-236-3, SC-59, SOT-23-3"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/MCP1702T-5002E-CB/1098473",
+      "inventoryNumber": "000577"
+    },
+    "000578": {
+      "datasheet": "https://content.u-blox.com/sites/default/files/CAM-M8-FW3_DataSheet_%28UBX-15031574%29.pdf",
+      "description": "CAM-M8 RF Receiver BeiDou, GLONASS, GNSS, GPS, QZSS 1.575GHz -167dBm On-Board, Chip Module",
+      "model": "CAM-M8Q-0",
+      "properties": {
+        "Frequency": "1.575GHz",
+        "Sensitivity": "-167dBm",
+        "Modulation or Protocol": "BeiDou, GLONASS, GNSS, GPS, QZSS",
+        "Applications": "General Purpose",
+        "Current - Receiving": "29mA",
+        "Data Interface": "SPI, UART",
+        "Antenna Connector": "On-Board, Chip",
+        "Voltage - Supply": "2.7V ~ 3.6V",
+        "Operating Temperature": "-40°C ~ 85°C",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "31-SMD Module"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/u-blox/CAM-M8Q-0/6150646",
+      "inventoryNumber": "000578"
+    },
+    "000579": {
+      "datasheet": "https://rocelec.widen.net/view/pdf/8oc8bkbhb2/CYPRS06685-1.pdf?t.download=true&u=5oefqw",
+      "description": "Clock Generator IC 300MHz 2 48-BSSOP (0.295\", 7.50mm Width)",
+      "model": "CY28331OC",
+      "properties": {
+        "Type": "Clock Generator",
+        "PLL": "Yes",
+        "Input": "Crystal",
+        "Output": "Clock",
+        "Number of Circuits": "2",
+        "Ratio - Input:Output": "2:8",
+        "Differential - Input:Output": "No/Yes",
+        "Frequency - Max": "300MHz",
+        "Divider/Multiplier": "Yes/No",
+        "Voltage - Supply": "3.135V ~ 3.465V",
+        "Operating Temperature": "0°C ~ 70°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "48-BSSOP (0.295\", 7.50mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/rochester-electronics-llc/CY28331OC/12602180",
+      "inventoryNumber": "000579"
+    },
+    "000580": {
+      "datasheet": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=CONUFL001-SMD-T&DocType=Data+Sheet&DocLang=English&DocFormat=pdf&PartCntxt=CONUFL001-SMD-T",
+      "description": "U.FL (UMCC) Connector Jack, Male Pin 50 Ohms Surface Mount Solder",
+      "model": "CONUFL001-SMD-T",
+      "properties": {
+        "Connector Style": "U.FL (UMCC)",
+        "Connector Type": "Jack, Male Pin",
+        "Contact Termination": "Solder",
+        "Shield Termination": "Solder",
+        "Impedance": "50 Ohms",
+        "Mounting Type": "Surface Mount",
+        "Fastening Type": "Snap-On",
+        "Frequency - Max": "6 GHz",
+        "Number of Ports": "1",
+        "Housing Color": "White",
+        "Center Contact Material": "Brass"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/te-connectivity-linx/CONUFL001-SMD-T/7427732",
+      "inventoryNumber": "000580"
+    },
+    "000581": {
+      "datasheet": [],
+      "description": "2SD2499, Транзистор, NPN 600В 6А 50Вт [TO-3ML]",
+      "model": "2SD2499, Транзистор, NPN 600В 6А 50Вт [TO-3ML]",
+      "properties": {
+        "Бренд": "Inchange",
+        "Структура": "npn с резистором и диодом",
+        "Макс. напр. к-б при заданном обратном токе к  и разомкнутой цепи э.(Uкбо макс),В": "1500",
+        "Макс. напр. к-э при заданном  токе к  и разомкнутой цепи б.(Uкэо макс),В": "600",
+        "Максимально допустимый ток к ( Iк макс.А)": "6",
+        "Статический коэффициент передачи тока h21э мин": "8…25",
+        "Граничная частота  коэффициента передачи тока  fгр.МГц": "2",
+        "Максимальная рассеиваемая мощность ,Вт": "50",
+        "Корпус": "to-3ml"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/2sd2499-tranzistor-npn-600v-6a-50vt-to-3ml-inchange-9000492007",
+      "inventoryNumber": "000581"
+    },
+    "000582": {
+      "datasheet": [],
+      "description": "КТ630В никель (202*г), Транзистор NPN, 1А, 150В, h21e=40…120 [КТ-2-7 / TO-39]",
+      "model": "КТ630В никель (202*г), Транзистор NPN, 1А, 150В, h21e=40…120 [КТ-2-7 / TO-39]",
+      "properties": {
+        "Бренд": "Кремний",
+        "Структура": "npn",
+        "Макс. напр. к-б при заданном обратном токе к  и разомкнутой цепи э.(Uкбо макс),В": "150",
+        "Макс. напр. к-э при заданном  токе к  и разомкнутой цепи б.(Uкэо макс),В": "150",
+        "Максимально допустимый ток к ( Iк макс.А)": "1",
+        "Статический коэффициент передачи тока h21э мин": "40…120",
+        "Граничная частота  коэффициента передачи тока  fгр.МГц": "50",
+        "Максимальная рассеиваемая мощность ,Вт": "0.8",
+        "Корпус": "кт-2-7(to-39)"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/kt630v-nikel-202-g-tranzistor-npn-1a-150v-kremniy-9000576698",
+      "inventoryNumber": "000582"
+    },
+    "000583": {
+      "datasheet": [],
+      "description": "КД521А, Диод импульсный 0.05А 75В [КД-2 / DO-35.]",
+      "model": "КД521А, Диод импульсный 0.05А 75В [КД-2 / DO-35.]",
+      "properties": {
+        "Бренд": "СЗТП",
+        "Материал": "Кремний",
+        "Кол-во диодов в корпусе": "1",
+        "Конфигурация диода": "Одиночный",
+        "Максимальное постоянное обратное напряжение, В": "75",
+        "Максимальное импульсное обратное напряжение, В": "80",
+        "Максимальный прямой(выпрямленный за полупериод) ток,А": "0.05",
+        "Максимально допустимый прямой импульсный ток,А": "0.5",
+        "Максимальный обратный ток,мкА 25гр": "1",
+        "Максимальное прямое напряжение,В": "1",
+        "при Iпр.,А": "0.05",
+        "Максимальное время обратного восстановления, нс": "4",
+        "Общая емкость Сд,пФ": "4",
+        "Рабочая температура,С": "-60…+125",
+        "Способ монтажа": "в отверстие",
+        "Корпус": "КД-2"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/kd521a-diod-impulsnyy-0.05a-75v-kd-2-do-35-sztp-461931158",
+      "inventoryNumber": "000583"
+    },
+    "000584": {
+      "datasheet": [],
+      "description": "Д237Б, Диод выпрямительный",
+      "model": "Д237Б, Диод выпрямительный",
+      "properties": {
+        "Бренд": "СЗТП",
+        "Кол-во диодов в корпусе": "1",
+        "Конфигурация диода": "Одиночный",
+        "Максимальное постоянное обратное напряжение, В": "400",
+        "Максимальный (средний) прямой ток на диод, If(AV) (А)": "0.3",
+        "Максимальное прямое напряжение при Tj=25 °C, Vf при If (В)": "1",
+        "Максимальный обратный ток при  Tj=25 °C, Ir при Vr (мкА)": "50",
+        "Рабочая температура PN-прехода (°С)": "-60…+125",
+        "Корпус": "КД-9"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/d237b-diod-vypryamitelnyy-sztp-9000500659",
+      "inventoryNumber": "000584"
+    },
+    "000585": {
+      "datasheet": [],
+      "description": "KT854A (202*г), Транзистор NPN, 10А, 500В, h21e =20 [КТ-28-2 / TO-220] (BU407D)",
+      "model": "KT854A (202*г), Транзистор NPN, 10А, 500В, h21e =20 [КТ-28-2 / TO-220] (BU407D)",
+      "properties": {
+        "Бренд": "Кремний",
+        "Структура": "npn",
+        "Макс. напр. к-б при заданном обратном токе к  и разомкнутой цепи э.(Uкбо макс),В": "600",
+        "Макс. напр. к-э при заданном  токе к  и разомкнутой цепи б.(Uкэо макс),В": "500",
+        "Максимально допустимый ток к ( Iк макс.А)": "10",
+        "Статический коэффициент передачи тока h21э мин": "20",
+        "Граничная частота  коэффициента передачи тока  fгр.МГц": "10",
+        "Максимальная рассеиваемая мощность ,Вт": "60",
+        "Корпус": "кт-28-2(то-220)"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/kt854a-202-g-tranzistor-npn-10a-500v-h21e-20-kremniy-9000576771",
+      "inventoryNumber": "000585"
+    },
+    "000586": {
+      "datasheet": [],
+      "description": "КД521В, Диод импульсный 0.05А 50В [КД-2 / DO-35.]",
+      "model": "КД521В, Диод импульсный 0.05А 50В [КД-2 / DO-35.]",
+      "properties": {
+        "Бренд": "СЗТП",
+        "Материал": "Кремний",
+        "Кол-во диодов в корпусе": "1",
+        "Конфигурация диода": "Одиночный",
+        "Максимальное постоянное обратное напряжение, В": "50",
+        "Максимальное импульсное обратное напряжение, В": "55",
+        "Максимальный прямой(выпрямленный за полупериод) ток,А": "0.05",
+        "Максимально допустимый прямой импульсный ток,А": "0.5",
+        "Максимальный обратный ток,мкА 25гр": "1",
+        "Максимальное прямое напряжение,В": "1",
+        "при Iпр.,А": "0.05",
+        "Максимальное время обратного восстановления, нс": "4",
+        "Общая емкость Сд,пФ": "4",
+        "Рабочая температура,С": "-60…+125",
+        "Способ монтажа": "в отверстие",
+        "Корпус": "КД-2"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/kd521v-diod-impulsnyy-0.05a-50v-kd-2-do-35-sztp-53398",
+      "inventoryNumber": "000586"
+    },
+    "000587": {
+      "datasheet": [],
+      "description": "KT850A (202*г), Транзистор NPN, 2А, 200В, h21e=40…200 [КТ-28-2 / TO-220] (2SD401A)",
+      "model": "KT850A (202*г), Транзистор NPN, 2А, 200В, h21e=40…200 [КТ-28-2 / TO-220] (2SD401A)",
+      "properties": {
+        "Бренд": "Кремний",
+        "Структура": "npn",
+        "Макс. напр. к-б при заданном обратном токе к  и разомкнутой цепи э.(Uкбо макс),В": "250",
+        "Макс. напр. к-э при заданном  токе к  и разомкнутой цепи б.(Uкэо макс),В": "200",
+        "Максимально допустимый ток к ( Iк макс.А)": "2",
+        "Статический коэффициент передачи тока h21э мин": "40",
+        "Граничная частота  коэффициента передачи тока  fгр.МГц": "20",
+        "Максимальная рассеиваемая мощность ,Вт": "25",
+        "Корпус": "кт-28-2(то-220)"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/kt850a-202-g-tranzistor-npn-2a-200v-h21e-40-200-kremniy-9000576767",
+      "inventoryNumber": "000587"
+    },
+    "000588": {
+      "datasheet": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Ftxb0108",
+      "description": "Voltage Level Translator Bidirectional 1 Circuit 8 Channel 100Mbps 20-TSSOP",
+      "model": "TXB0108PWR",
+      "properties": {
+        "Translator Type": "Voltage Level",
+        "Channel Type": "Bidirectional",
+        "Number of Circuits": "1",
+        "Channels per Circuit": "8",
+        "Voltage - VCCA": "1.2 V ~ 3.6 V",
+        "Voltage - VCCB": "1.65 V ~ 5.5 V",
+        "Output Type": "Tri-State, Non-Inverted",
+        "Data Rate": "100Mbps",
+        "Operating Temperature": "-40°C ~ 85°C (TA)",
+        "Features": "Auto-Direction Sensing",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "20-TSSOP (0.173\", 4.40mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/TXB0108PWR/1305699",
+      "inventoryNumber": "000588"
+    },
+    "000589": {
+      "datasheet": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm1881",
+      "description": "Video Separator IC NTSC, PAL, SECAM 8-PDIP Package",
+      "model": "LM1881N",
+      "properties": {
+        "Function": "Separator",
+        "Applications": "Professional Video",
+        "Standards": "NTSC, PAL, SECAM",
+        "Voltage - Supply": "5V ~ 12V",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "8-DIP (0.300\", 7.62mm)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM1881N/3694841",
+      "inventoryNumber": "000589"
+    },
+    "000590": {
+      "datasheet": [],
+      "description": "ICL7106CPLZ, Аналого-цифровой преобразователь (=КР572ПВ5А) [PDIP-40]",
+      "model": "ICL7106CPLZ, Аналого-цифровой преобразователь (=КР572ПВ5А) [PDIP-40]",
+      "properties": {
+        "Бренд": "Renesas",
+        "Тип": "display driver",
+        "Кол-во каналов": "2",
+        "Разрешение (Бит)": "3.5 digit",
+        "Напряжение питания, В": "±4.75…5.25",
+        "Рабочая температура, °C": "0…+70",
+        "Корпус": "dip-40(15.24 мм)"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/icl7106cplz-analogo-tsifrovoy-preobrazovatel-kr572pv5a-renesas-43532",
+      "inventoryNumber": "000590"
+    },
+    "000591": {
+      "datasheet": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn75161b",
+      "description": "8/8 Transceiver Half IEEE 488 20-PDIP",
+      "model": "SN75161BN",
+      "properties": {
+        "Type": "Transceiver",
+        "Protocol": "IEEE 488",
+        "Number of Drivers/Receivers": "8/8",
+        "Duplex": "Half",
+        "Receiver Hysteresis": "650 mV",
+        "Voltage - Supply": "4.75V ~ 5.25V",
+        "Operating Temperature": "0°C ~ 70°C",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "20-DIP (0.300\", 7.62mm)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN75161BN/370219",
+      "inventoryNumber": "000591"
+    },
+    "000592": {
+      "datasheet": "https://ww1.microchip.com/downloads/en/DeviceDoc/40044G.pdf",
+      "description": "PIC PIC® 16F Microcontroller IC 8-Bit 20MHz 7KB (4K x 14) FLASH 18-PDIP",
+      "model": "PIC16F648A-I/P",
+      "properties": {
+        "Core Processor": "PIC",
+        "Core Size": "8-Bit",
+        "Speed": "20MHz",
+        "Connectivity": "UART/USART",
+        "Peripherals": "Brown-out Detect/Reset, POR, PWM, WDT",
+        "Number of I/O": "16",
+        "Program Memory Size": "7KB (4K x 14)",
+        "Program Memory Type": "FLASH",
+        "EEPROM Size": "256 x 8",
+        "RAM Size": "256 x 8",
+        "Voltage - Supply (Vcc/Vdd)": "3V ~ 5.5V",
+        "Oscillator Type": "Internal",
+        "Operating Temperature": "-40°C ~ 85°C (TA)",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "18-DIP (0.300\", 7.62mm)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/PIC16F648A-I-P/529770",
+      "inventoryNumber": "000592"
+    },
+    "000593": {
+      "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/24AA256-24LC256-24FC256-256K-I2C-Serial-EEPROM-DS20001203.pdf",
+      "description": "EEPROM Memory IC 256Kbit I2C 400 kHz 900 ns 8-PDIP",
+      "model": "24LC256-I/P",
+      "properties": {
+        "Memory Type": "Non-Volatile",
+        "Memory Format": "EEPROM",
+        "Technology": "EEPROM",
+        "Memory Size": "256Kbit",
+        "Memory Organization": "32K x 8",
+        "Memory Interface": "I2C",
+        "Clock Frequency": "400 kHz",
+        "Write Cycle Time - Word, Page": "5ms",
+        "Access Time": "900 ns",
+        "Voltage - Supply": "2.5V ~ 5.5V",
+        "Operating Temperature": "-40°C ~ 85°C (TA)",
+        "Mounting Type": "Through Hole",
+        "Package / Case": "8-DIP (0.300\", 7.62mm)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/24LC256-I-P/273431",
+      "inventoryNumber": "000593"
+    },
+    "000594": {
+      "datasheet": [],
+      "description": "2Д213А, Диод, 1986г.; №2Д Двып 200\\ 10А\\2Д213А\\КД- Ю-23-1\\[КД-213А]",
+      "model": "2Д213А, Диод, 1986г.; №2Д Двып 200\\ 10А\\2Д213А\\КД- Ю-23-1\\[КД-213А]",
+      "properties": {
+        "Бренд": "No trademark",
+        "Кол-во диодов в корпусе": "1",
+        "Конфигурация диода": "Одиночный",
+        "Максимальное постоянное обратное напряжение, В": "200",
+        "Максимальный (средний) прямой ток на диод, If(AV) (А)": "10",
+        "Максимальное прямое напряжение при Tj=25 °C, Vf при If (В)": "1",
+        "Максимальный обратный ток при  Tj=25 °C, Ir при Vr (мкА)": "200",
+        "Емкость, пФ": "550",
+        "Рабочая температура PN-прехода (°С)": "+130",
+        "Корпус": "КД-Ю-23-1"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/2d213a-diod-1986g-2d-dvyp-200-10a-2d213a-kd-yu-23-1-kd-213a-8049042880",
+      "inventoryNumber": "000594"
+    },
+    "000595": {
+      "datasheet": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/1047/MAX_3000A_Device_Family.pdf",
+      "description": "",
+      "model": "EPM3032ALC44-10N",
+      "properties": {
+        "Programmable Type": "In System Programmable",
+        "Delay Time tpd(1) Max": "10 ns",
+        "Voltage Supply - Internal": "3V ~ 3.6V",
+        "Number of Logic Elements/Blocks": "2",
+        "Number of Macrocells": "32",
+        "Number of Gates": "600",
+        "Number of I/O": "34",
+        "Operating Temperature": "0°C ~ 70°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "44-LCC (J-Lead)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/altera/EPM3032ALC44-10N/1084711",
+      "inventoryNumber": "000595"
+    },
+    "000596": {
+      "datasheet": [],
+      "description": "2SK3567, Транзистор, N-канал [TO-220F]",
+      "model": "2SK3567, Транзистор, N-канал [TO-220F]",
+      "properties": {
+        "Бренд": "Toshiba",
+        "Структура": "N-Channel",
+        "Максимальное напряжение сток-исток Uси,В": "600",
+        "Максимальный ток сток-исток при 25 С  Iси макс..А": "3",
+        "Сопротивление канала в открытом состоянии Rси вкл. (Max) при Id, Rds (on)": "2.2 Ом/1.8А, 10В",
+        "Максимальная рассеиваемая мощность Pси макс..Вт": "40",
+        "Крутизна характеристики, S": "2.6",
+        "Корпус": "SC-67/2-10U1B"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/2sk3567-tranzistor-n-kanal-to-220f-toshiba-9020003116",
+      "inventoryNumber": "000596"
+    },
+    "000597": {
+      "datasheet": [],
+      "description": "Изделие MSGEQ7, DIP-8 Графический эквалайзер",
+      "model": "Изделие MSGEQ7, DIP-8 Графический эквалайзер",
+      "properties": {
+        "Бренд": "No trademark"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/izdelie-msgeq7-dip-8-graficheskiy-ekvalayzer-8073340554",
+      "inventoryNumber": "000597"
+    },
+    "000598": {
+      "datasheet": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74f245",
+      "description": "Transceiver, Non-Inverting 1 Element 8 Bit per Element 3-State Output 20-SOIC",
+      "model": "SN74F245DWR",
+      "properties": {
+        "Logic Type": "Transceiver, Non-Inverting",
+        "Number of Elements": "1",
+        "Number of Bits per Element": "8",
+        "Output Type": "3-State",
+        "Current - Output High, Low": "3mA, 24mA; 15mA, 64mA",
+        "Voltage - Supply": "4.5V ~ 5.5V",
+        "Operating Temperature": "0°C ~ 70°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "20-SOIC (0.295\", 7.50mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN74F245DWR/276824",
+      "inventoryNumber": "000598"
+    },
+    "000599": {
+      "datasheet": "https://www.renesas.com/en/document/dst/hin202e-hin206e-hin207e-hin208e-hin211e-hin213e-hin232e-datasheet",
+      "description": "2/2 Transceiver Full RS232 16-SOIC",
+      "model": "HIN202ECBNZ",
+      "properties": {
+        "Type": "Transceiver",
+        "Protocol": "RS232",
+        "Number of Drivers/Receivers": "2/2",
+        "Duplex": "Full",
+        "Receiver Hysteresis": "500 mV",
+        "Data Rate": "230kbps",
+        "Voltage - Supply": "4.5V ~ 5.5V",
+        "Operating Temperature": "0°C ~ 70°C",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "16-SOIC (0.154\", 3.90mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/HIN202ECBNZ/1062421",
+      "inventoryNumber": "000599"
+    },
+    "000600": {
+      "datasheet": [],
+      "description": "FE1.1S-BSOP28BCN, Контроллер USB 2.0 [SSOP-28]",
+      "model": "FE1.1S-BSOP28BCN, Контроллер USB 2.0 [SSOP-28]",
+      "properties": {
+        "Бренд": "Terminus"
+      },
+      "provider": "chipdip",
+      "url": "https://www.chipdip.ru/product/fe1.1s-bsop28bcn-kontroller-usb-2.0-ssop-28-terminus-9000894627",
+      "inventoryNumber": "000600"
+    },
+    "000601": {
+      "datasheet": "https://www.st.com/content/ccc/resource/technical/document/datasheet/dc/d6/6d/24/86/2a/40/d3/DM00108217.pdf/files/DM00108217.pdf/jcr:content/translations/en.DM00108217.pdf",
+      "description": "ARM® Cortex®-M0+ STM32L0 Microcontroller IC 32-Bit 32MHz 64KB (64K x 8) FLASH 32-UFQFPN (5x5)",
+      "model": "STM32L052K8U6",
+      "properties": {
+        "Core Processor": "ARM® Cortex®-M0+",
+        "Core Size": "32-Bit",
+        "Speed": "32MHz",
+        "Connectivity": "I2C, IrDA, SPI, UART/USART, USB",
+        "Peripherals": "Brown-out Detect/Reset, DMA, POR, PWM, WDT",
+        "Number of I/O": "27",
+        "Program Memory Size": "64KB (64K x 8)",
+        "Program Memory Type": "FLASH",
+        "EEPROM Size": "2K x 8",
+        "RAM Size": "8K x 8",
+        "Voltage - Supply (Vcc/Vdd)": "1.65V ~ 3.6V",
+        "Data Converters": "A/D 10x12b; D/A 1x12b",
+        "Oscillator Type": "Internal",
+        "Operating Temperature": "-40°C ~ 85°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "32-UFQFN Exposed Pad"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32L052K8U6/5051361",
+      "inventoryNumber": "000601"
+    },
+    "000602": {
+      "datasheet": "",
+      "description": "Power Switch/Driver 1:1 N-Channel PG-DSO-36-48",
+      "model": "TLE6240GPNUMA1",
+      "properties": {
+        "Switch Type": "General Purpose",
+        "Number of Outputs": "16",
+        "Ratio - Input:Output": "1:1",
+        "Output Configuration": "Low Side",
+        "Output Type": "N-Channel",
+        "Interface": "SPI",
+        "Voltage - Load": "45V (Max)",
+        "Voltage - Supply (Vcc/Vdd)": "4.5V ~ 5.5V",
+        "Rds On (Typ)": "300mOhm, 350mOhm, 1Ohm",
+        "Features": "Status Flag",
+        "Fault Protection": "Open Load Detect, Over Temperature, Over Voltage",
+        "Operating Temperature": "-40°C ~ 150°C (TJ)",
+        "Grade": "Automotive",
+        "Qualification": "AEC-Q100",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "36-BSSOP (0.433\", 11.00mm Width) Exposed Pad"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/infineon-technologies/TLE6240GPNUMA1/8022936",
+      "inventoryNumber": "000602"
+    },
+    "000603": {
+      "datasheet": "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc245",
+      "description": "Transceiver, Non-Inverting 1 Element 8 Bit per Element 3-State Output 20-SO",
+      "model": "SN74HC245NSR",
+      "properties": {
+        "Logic Type": "Transceiver, Non-Inverting",
+        "Number of Elements": "1",
+        "Number of Bits per Element": "8",
+        "Output Type": "3-State",
+        "Current - Output High, Low": "7.8mA, 7.8mA",
+        "Voltage - Supply": "2V ~ 6V",
+        "Operating Temperature": "-40°C ~ 85°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "20-SOIC (0.209\", 5.30mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN74HC245NSR/376994",
+      "inventoryNumber": "000603"
+    },
+    "000604": {
+      "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/max5090-max5090c.pdf",
+      "description": "Buck Switching Regulator IC Positive Fixed 5V 1 Output 2A 16-WQFN Exposed Pad",
+      "model": "MAX5090BATE+",
+      "properties": {
+        "Function": "Step-Down",
+        "Output Configuration": "Positive",
+        "Topology": "Buck",
+        "Output Type": "Fixed",
+        "Number of Outputs": "1",
+        "Voltage - Input (Min)": "6.5V",
+        "Voltage - Input (Max)": "76V",
+        "Voltage - Output (Min/Fixed)": "5V",
+        "Current - Output": "2A",
+        "Frequency - Switching": "127kHz",
+        "Operating Temperature": "-40°C ~ 125°C (TJ)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "16-WQFN Exposed Pad"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX5090BATE/1456465",
+      "inventoryNumber": "000604"
+    },
+    "000605": {
+      "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/max3100.pdf",
+      "description": "RS232, RS485 Controller SPI, UART Interface 16-QSOP",
+      "model": "MAX3100CEE+T",
+      "properties": {
+        "Protocol": "RS232, RS485",
+        "Function": "Controller",
+        "Interface": "SPI, UART",
+        "Voltage - Supply": "2.7V ~ 5.5V",
+        "Current - Supply": "150µA",
+        "Operating Temperature": "0°C ~ 70°C",
+        "Package / Case": "16-SSOP (0.154\", 3.90mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX3100CEE-T/1522072",
+      "inventoryNumber": "000605"
+    },
+    "000606": {
+      "datasheet": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/911/AT45DB321D.pdf",
+      "description": "FLASH Memory IC 32Mbit SPI 66 MHz 28-TSOP",
+      "model": "AT45DB321D-TU",
+      "properties": {
+        "Memory Type": "Non-Volatile",
+        "Memory Format": "FLASH",
+        "Technology": "FLASH",
+        "Memory Size": "32Mbit",
+        "Memory Organization": "528 Bytes x 8192 pages",
+        "Memory Interface": "SPI",
+        "Clock Frequency": "66 MHz",
+        "Write Cycle Time - Word, Page": "6ms",
+        "Voltage - Supply": "2.7V ~ 3.6V",
+        "Operating Temperature": "-40°C ~ 85°C (TC)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "28-TSSOP (0.465\", 11.80mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/microchip-technology/AT45DB321D-TU/1118870",
+      "inventoryNumber": "000606"
+    },
+    "000607": {
+      "datasheet": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4847/DS_1265_AT45DB161D.pdf",
+      "description": "FLASH Memory IC 16Mbit SPI 66 MHz 28-TSOP",
+      "model": "AT45DB161D-TU",
+      "properties": {
+        "Memory Type": "Non-Volatile",
+        "Memory Format": "FLASH",
+        "Technology": "FLASH",
+        "Memory Size": "16Mbit",
+        "Memory Organization": "528 Bytes x 4096 pages",
+        "Memory Interface": "SPI",
+        "Clock Frequency": "66 MHz",
+        "Write Cycle Time - Word, Page": "6ms",
+        "Voltage - Supply": "2.7V ~ 3.6V",
+        "Operating Temperature": "-40°C ~ 85°C (TC)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "28-TSSOP (0.465\", 11.80mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/AT45DB161D-TU/3828557",
+      "inventoryNumber": "000607"
+    },
+    "000608": {
+      "datasheet": "//mm.digikey.com/Volume0/opasdata/d220001/medias/docus/911/AT45DB321D.pdf",
+      "description": "FLASH Memory IC 32Mbit SPI 66 MHz 8-SOIC",
+      "model": "AT45DB321D-SU",
+      "properties": {
+        "Memory Type": "Non-Volatile",
+        "Memory Format": "FLASH",
+        "Technology": "FLASH",
+        "Memory Size": "32Mbit",
+        "Memory Organization": "528 Bytes x 8192 pages",
+        "Memory Interface": "SPI",
+        "Clock Frequency": "66 MHz",
+        "Write Cycle Time - Word, Page": "6ms",
+        "Voltage - Supply": "2.7V ~ 3.6V",
+        "Operating Temperature": "-40°C ~ 85°C (TC)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "8-SOIC (0.209\", 5.30mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/renesas-electronics-corporation/AT45DB321D-SU/3828613",
+      "inventoryNumber": "000608"
+    },
+    "000609": {
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/mc34161-d.pdf",
+      "description": "Supervisor Open Drain or Open Collector 2 Channel 8-SOIC",
+      "model": "MC33161D",
+      "properties": {
+        "Type": "Multi-Voltage Supervisor",
+        "Number of Voltages Monitored": "2",
+        "Voltage - Threshold": "Adjustable/Selectable",
+        "Output": "Open Drain or Open Collector",
+        "Operating Temperature": "-40°C ~ 105°C (TA)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "8-SOIC (0.154\", 3.90mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/onsemi/MC33161D/1479105",
+      "inventoryNumber": "000609"
+    },
+    "000610": {
+      "datasheet": "https://www.onsemi.com/pdf/datasheet/mc1413-d.pdf",
+      "description": "Bipolar (BJT) Transistor Array 7 NPN Darlington 50V 500mA Surface Mount 16-SOIC",
+      "model": "MC1413BDG",
+      "properties": {
+        "Transistor Type": "7 NPN Darlington",
+        "Current - Collector (Ic) (Max)": "500mA",
+        "Voltage - Collector Emitter Breakdown (Max)": "50V",
+        "Vce Saturation (Max) @ Ib, Ic": "1.6V @ 500µA, 350mA",
+        "DC Current Gain (hFE) (Min) @ Ic, Vce": "1000 @ 350mA, 2V",
+        "Operating Temperature": "150°C (TJ)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "16-SOIC (0.154\", 3.90mm Width)"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/onsemi/MC1413BDG/920832",
+      "inventoryNumber": "000610"
+    },
+    "000611": {
+      "datasheet": "http://www.vishay.com/docs/91195/sihfl901.pdf",
+      "description": "P-Channel 60 V 1.8A (Tc) 2W (Ta), 3.1W (Tc) Surface Mount SOT-223",
+      "model": "IRFL9014TRPBF",
+      "properties": {
+        "FET Type": "P-Channel",
+        "Technology": "MOSFET (Metal Oxide)",
+        "Drain to Source Voltage (Vdss)": "60 V",
+        "Current - Continuous Drain (Id) @ 25°C": "1.8A (Tc)",
+        "Drive Voltage (Max Rds On, Min Rds On)": "10V",
+        "Rds On (Max) @ Id, Vgs": "500mOhm @ 1.1A, 10V",
+        "Vgs(th) (Max) @ Id": "4V @ 250µA",
+        "Gate Charge (Qg) (Max) @ Vgs": "12 nC @ 10 V",
+        "Vgs (Max)": "±20V",
+        "Input Capacitance (Ciss) (Max) @ Vds": "270 pF @ 25 V",
+        "Power Dissipation (Max)": "2W (Ta), 3.1W (Tc)",
+        "Operating Temperature": "-55°C ~ 150°C (TJ)",
+        "Mounting Type": "Surface Mount",
+        "Package / Case": "TO-261-4, TO-261AA"
+      },
+      "provider": "digikey",
+      "url": "https://www.digikey.com/en/products/detail/vishay-siliconix/IRFL9014TRPBF/811421",
+      "inventoryNumber": "000611"
     }
   },
   "digikey": {
-    "expiration": "2026-09-24T01:49:02.773Z",
-    "token": "uGq4mz2grcAOZyC7JzqT6gc4AA4X"
+    "expiration": "2026-09-26T03:24:20.139Z",
+    "token": "D2aWKbEb0OJBsiYBCNpSMPGJDfGh"
   }
 }

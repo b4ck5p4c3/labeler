@@ -1,5 +1,6 @@
 import { JSDOM } from 'jsdom'
 import ky from 'ky'
+import { withCookies } from 'ky-cookies'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -7,6 +8,7 @@ import promptSync from 'prompt-sync'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import { Lock } from 'semaphore-async-await'
+import { CookieJar } from 'tough-cookie'
 import { transliter } from 'transliter'
 
 import type { DigikeySearchResponse } from './digikey-types'
@@ -81,7 +83,7 @@ export function filterMeaningfulProperties (properties: Record<string, string>):
       return false
     }
 
-    if (value === 'No' || value === '-' || value === 'N/A' || value === '') {
+    if (!value || value === 'No' || value === '-' || value === 'N/A' || value === '') {
       return false
     }
 
@@ -265,8 +267,16 @@ async function getDigikeyProductVariants (persistence: Persistence, search: stri
   }))
 }
 
-async function getLCSCProductVariants (search: string): Promise<AbstractProductInfo[]> {
-  const request = await ky.post('https://wmsc.lcsc.com/ftps/wm/search/v2/global', {
+export async function getLCSCProductVariants (search: string): Promise<AbstractProductInfo[]> {
+  const api = ky.extend(withCookies(new CookieJar()))
+
+  const page = await api.get('https://www.lcsc.com/')
+  // const pageText =
+  await page.text()
+  // const key = pageText.match(/encryptPublicHexKey:"([a-f0-9]+)"/ig)
+  // console.info(key)
+
+  const request = await ky.post('https://wmsc.lcsc.com/ftps/wm/search/v3/global', {
     json: {
       keyword: search
     },
@@ -280,13 +290,20 @@ async function getLCSCProductVariants (search: string): Promise<AbstractProductI
 
   const response = await request.json() as LCSCSearchResponse
 
-  return response.result.productSearchResultVO?.productList?.map(product => ({
+  return response.result.exactMatchResult?.map(product => ({
     datasheet: product.pdfUrl ?? null,
     description: product.catalogName + ' - ' + product.productIntroEn,
     model: product.productModel,
-    properties: product.paramVOList
-      ? Object.fromEntries(product.paramVOList.map(parameter => [parameter.paramNameEn, parameter.paramValueEn]))
-      : {},
+    properties: filterMeaningfulProperties({
+      Brand: product.brandNameEn,
+      Catalog: product.catalogName,
+      Encap: product.encapStandard,
+      Name: product.productNameEn,
+      ParentCatalog: product.parentCatalogName
+    }),
+    // properties: product.paramVOList
+    //   ? Object.fromEntries(product.paramVOList.map(parameter => [parameter.paramNameEn, parameter.paramValueEn]))
+    //   : {},
     provider: ProductInfoProvider.LCSC,
     url: product.url
   })) ?? []
@@ -312,7 +329,6 @@ async function getChipdipDatasheets (itemUrl: string): Promise<Datasheet> {
   return datasheets.length === 1 && firstDatasheet ? firstDatasheet : datasheets
 }
 
-console.info('starting puppeteer...')
 puppeteer.use(StealthPlugin())
 const chipDipPuppeteer = await puppeteer.launch({
   headless: false
@@ -521,51 +537,56 @@ async function reprint (persistence: Persistence, inventoryNumber: string) {
   await print(item)
 }
 
-while (true) {
-  const persistence = JSON.parse(fs.readFileSync(PERSISTENCE_FILE_PATH).toString('utf8')) as Persistence
+async function main () {
+  while (true) {
+    const persistence = JSON.parse(fs.readFileSync(PERSISTENCE_FILE_PATH).toString('utf8')) as Persistence
 
-  try {
-    const query = prompt('> ')
-    if (query === null) {
-      await chipDipPuppeteer.close()
-      process.exit(0)
-    }
+    try {
+      const query = prompt('> ')
+      if (query === null) {
+        await chipDipPuppeteer.close()
+        process.exit(0)
+      }
 
-    if (query === 'reprint') {
-      const reprintNumber = prompt('number to reprint > ')
-      await reprint(persistence, reprintNumber)
-      continue
-    }
+      if (query === 'reprint') {
+        const reprintNumber = prompt('number to reprint > ')
+        await reprint(persistence, reprintNumber)
+        continue
+      }
 
-    // Find closest match in our pool
-    const possibleMatches = Object.values(persistence.items).filter(item => {
-      if (item.model.toLowerCase().includes(query.toLowerCase()) ||
+      // Find closest match in our pool
+      const possibleMatches = Object.values(persistence.items).filter(item => {
+        if (item.model.toLowerCase().includes(query.toLowerCase()) ||
       query.toLowerCase().includes(item.model.toLowerCase())) {
-        return true
+          return true
+        }
+
+        return false
+      })
+
+      if (possibleMatches.length > 0) {
+        console.log('found possible matches:')
+        for (const item of possibleMatches) {
+          console.log(`(${item.inventoryNumber}) ${item.model} - ${item.description}`)
+        }
+
+        prompt('continue (enter), exit (Ctrl+C)')
       }
 
-      return false
-    })
+      const result = await getProductInformation(persistence, query)
+      if (result) {
+        console.log('printing...')
+        await print(result)
 
-    if (possibleMatches.length > 0) {
-      console.log('found possible matches:')
-      for (const item of possibleMatches) {
-        console.log(`(${item.inventoryNumber}) ${item.model} - ${item.description}`)
+        persistence.items[result.inventoryNumber] = result
+        persistence.latestInventoryNumber = Number.parseInt(result.inventoryNumber)
+        fs.writeFileSync(PERSISTENCE_FILE_PATH, JSON.stringify(persistence, null, 2))
       }
-
-      prompt('continue (enter), exit (Ctrl+C)')
+    } catch (error) {
+      console.error(error)
     }
-
-    const result = await getProductInformation(persistence, query)
-    if (result) {
-      console.log('printing...')
-      await print(result)
-
-      persistence.items[result.inventoryNumber] = result
-      persistence.latestInventoryNumber = Number.parseInt(result.inventoryNumber)
-      fs.writeFileSync(PERSISTENCE_FILE_PATH, JSON.stringify(persistence, null, 2))
-    }
-  } catch (error) {
-    console.error(error)
   }
 }
+
+// eslint-disable-next-line unicorn/prefer-top-level-await
+main()

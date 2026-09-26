@@ -10,6 +10,7 @@ export interface Result {
   readonly brandUrlMap: null;
   readonly brandVOS: BrandVO[];
   readonly catalogVOS: CatalogVo[];
+  readonly exactMatchResult: ProductList[];
   readonly isToBrand: null;
   readonly isToDetail: null;
   readonly productSearchResultVO: ProductSearchResultVO;
@@ -108,6 +109,7 @@ export interface ProductList {
   readonly productLadderPrice: null;
   readonly productModel: string;
   readonly productModelHighlight: string;
+  readonly productNameEn: string;
   readonly productPriceList: ProductPriceList[];
   readonly productUnit: string;
   readonly productWeight: number;
